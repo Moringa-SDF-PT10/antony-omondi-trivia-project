@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif, Helvetica, sans-serif;
+    background: linear-gradient(90deg, rgba(0, 36, 34, 0.77) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    text-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

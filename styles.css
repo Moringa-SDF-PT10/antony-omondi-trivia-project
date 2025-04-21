@@ -8,3 +8,15 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.main-section {
+    text-align: center;
+}
+
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+

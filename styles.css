@@ -27,3 +27,15 @@ button {
     border-radius: 7px;
     cursor: pointer;
 }
+
+button:hover {
+    box-shadow: 0 0 20px green;
+    border: 3px solid green;
+    cursor: pointer;
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+

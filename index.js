@@ -25,15 +25,35 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // Decode and display question text inside the element with ID questionContent 
     function displayQuestion(){
+        reset()
+
         if (questionIndex >= questions.length){
             return displayScore()
         }
+
+        const question = questions[questionIndex]
+        questionContent.innerHTML = decodeHTML(question.question)
+
+        const answers = [...question.incorrect_answers, question.correct_answers]
+
     }
 
     function displayScore(){
         quizSection.classList.add("hidden")
         resultsDisplay.classList.remove("hidden")
         finalScore.textContent = `${score} / ${questions.length}`
+    }
+
+    function decodeHTML(html){
+        const text = document.createElement("textarea")
+        text.innerHTML = html
+        return text.value
+    }
+
+    function reset(){
+        ansButtons.innerHTML = ""
+        next.classList.add("hidden")
     }
 })

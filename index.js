@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let score = 0
     let questions = []
 
+    start.addEventListener('click', startTrivia)
+
     function startTrivia(){
         fetch("https://opentdb.com/api.php?amount=5&type=multiple")
         .then(res => res.json())
@@ -19,7 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
             questions = data.results
             start.classList.add("hidden")
             quizSection.classList.remove("hidden")
-            
+            displayQuestion()
         })
+    }
+
+    function displayQuestion(){
+        if (questionIndex >= questions.length){
+            return displayScore()
+        }
+    }
+
+    function displayScore(){
+        quizSection.classList.add("hidden")
+        resultsDisplay.classList.remove("hidden")
+        finalScore.textContent = `${score} / ${questions.length}`
     }
 })

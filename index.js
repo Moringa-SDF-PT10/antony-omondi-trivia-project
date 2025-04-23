@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         questionContent.innerHTML = decodeHTML(question.question)
 
         const answers = [...question.incorrect_answers, question.correct_answers]
+        shuffleAnswers(answers)
 
     }
 
@@ -55,5 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function reset(){
         ansButtons.innerHTML = ""
         next.classList.add("hidden")
+    }
+
+    // Fisher-Yates shuffle to rearrange the answers positioning.
+    // To prevent the answer being in the same position all the time.
+    function shuffleAnswers(){
+        for (let i = array.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1))
+            [array[i], array[j]] = [array[j],array[i]]
+        }
     }
 })

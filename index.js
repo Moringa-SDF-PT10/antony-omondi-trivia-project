@@ -14,8 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     start.addEventListener('click', startTrivia)
 
+    next.addEventListener("click", () => {
+        questionIndex++
+        displayQuestion()
+    })
+    
+    resetQuiz.addEventListener("click", () => {
+        location.reload()
+    })
+
     function startTrivia(){
-        fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+        fetch("https://opentdb.com/api.php?amount=6&type=multiple")
         .then(res => res.json())
         .then(data => {
             questions = data.results
@@ -26,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Decode and display question text inside the element with ID questionContent 
+    // Together with the multiple choice answers
     function displayQuestion(){
         reset()
 
@@ -36,17 +46,45 @@ document.addEventListener("DOMContentLoaded", () => {
         const question = questions[questionIndex]
         questionContent.innerHTML = decodeHTML(question.question)
 
-        const answers = [...question.incorrect_answers, question.correct_answers]
+        const answers = [...question.incorrect_answers, question.correct_answer]
         shuffleAnswers(answers)
+
+        console.log("Answers:", answers)
+        // Iterates through every answer and assigns a button thus displaying buttons with their text content being the answers.
+        answers.forEach(answer => {
+            const button = document.createElement("button")
+            button.textContent = decodeHTML(answer)
+            button.classList.add("answer-btn")
+
+            // Checks if the answer clicked matches the correct answer and increments the score if true
+            button.addEventListener('click', () => {
+                if (decodeHTML(answer) === decodeHTML(question.correct_answer)){
+                    score++
+                }
+                next.classList.remove("hidden")
+            })
+
+            button.addEventListener("mouseover", () => {
+                button.classList.add("hovered")
+            })
+
+            button.addEventListener("mouseout", () => {
+                button.classList.remove("hovered")
+            })
+            
+            ansButtons.appendChild(button)
+        })
 
     }
 
+    // Display final score after all questions are answered.
     function displayScore(){
         quizSection.classList.add("hidden")
         resultsDisplay.classList.remove("hidden")
         finalScore.textContent = `${score} / ${questions.length}`
     }
 
+    // Decode the question to a readable on by humans.
     function decodeHTML(html){
         const text = document.createElement("textarea")
         text.innerHTML = html
@@ -60,9 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fisher-Yates shuffle to rearrange the answers positioning.
     // To prevent the answer being in the same position all the time.
-    function shuffleAnswers(){
+    function shuffleAnswers(array){
         for (let i = array.length - 1; i > 0; i--){
-            const j = Math.floor(Math.random() * (i + 1))
+            let j = Math.floor(Math.random() * (i + 1))
             [array[i], array[j]] = [array[j],array[i]]
         }
     }

@@ -49,7 +49,7 @@ The question are choosen at random from a pool of different fields and displayed
 ## 📸 Preview/Screenshots
 ![IMG](./assets/start-page.png)
 ![IMG](./assets/example-quiz.png)
-![IMG](./assets/finalscore.png)
+![IMG](./assets/final-score.png)
 
 ## Future Improvement
 - Reset the answer buttons incase a user wants to change their answer

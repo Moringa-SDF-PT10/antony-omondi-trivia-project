@@ -1,12 +1,12 @@
 # 🧠 TRIVIA QUIZ GAME
-Welcome to the Trivia Quiz Game that uses a public API to generate the question sand answers then lets the user choose their answer and after answering the six questions, it displays the final score.
+Welcome to the Trivia Quiz Game that uses a public API to generate the questions and answers then lets the user choose their answer and after answering the five questions, the App displays the final score.
 
 ## Summary
 The Trivia Quiz Game uses `Open Trivia DB API` to generate random trivia questions which are displayed for the user to answer. 
 
 The question are choosen at random from a pool of different fields and displayed for the user to answer.
 
-## Application Features
+## 🎮 Application Features
 
 - Start the Trivia Quiz by clicking the Start Button on the landing page
 - Dynamically load 5 multiple choice questions from the Open Trivia DB API
@@ -16,7 +16,7 @@ The question are choosen at random from a pool of different fields and displayed
 - Keyboard input 'Enter' for 'Next'
 - Hover effect on the buttons
 
-## Technologies Used
+## 💡 Technologies Used
 
 - `HTML`
 - `CSS`
@@ -46,7 +46,7 @@ The question are choosen at random from a pool of different fields and displayed
 - After answering all the questions, your final score will be displayed.
 - Click **Restart Quiz** to start again
 
-## Preview/Screenshots
+## 📸 Preview/Screenshots
 ![IMG](./assets/start-page.png)
 ![IMG](./assets/example-quiz.png)
 ![IMG](./assets/finalscore.png)

@@ -6,7 +6,7 @@ The Trivia Quiz Game uses `Open Trivia DB API` to generate random trivia questio
 
 The question are choosen at random from a pool of different fields and displayed for the user to answer.
 
-## Features
+## Application Features
 
 - Start the Trivia Quiz by clicking the Start Button on the landing page
 - Dynamically load 5 multiple choice questions from the Open Trivia DB API
@@ -21,4 +21,5 @@ The question are choosen at random from a pool of different fields and displayed
 - `HTML`
 - `CSS`
 - `JavaScript`
-- `Open Trivia DB API ()`
+- `Open Trivia DB API`
+

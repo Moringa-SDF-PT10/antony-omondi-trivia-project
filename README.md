@@ -43,3 +43,10 @@ The question are choosen at random from a pool of different fields and displayed
 - After answering all the questions, your final score will be displayed.
 - Click **Restart Quiz** to start again
 
+## Preview/Screenshots
+![IMG](./assets/start-page.png)
+![IMG](./assets/example-quiz.png)
+![IMG](./assets/finalscore.png)
+
+
+

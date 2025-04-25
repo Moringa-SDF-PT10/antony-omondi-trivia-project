@@ -42,7 +42,7 @@ button {
     color: green
 }
 
-#reset-btn {
+#reset-btn:hover {
     box-shadow: 0 0 20px green;
     border: 3px solid green;
     cursor: pointer;

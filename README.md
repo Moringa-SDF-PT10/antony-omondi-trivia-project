@@ -26,12 +26,15 @@ The question are choosen at random from a pool of different fields and displayed
 ## Project Structure
 ```
 📦 antony-omondi-trivia-project
-├─ index.html       
+├─ index.html
 ├─ index.js
 ├─ styles.css
 ├─ README.md
 └─ assets
-   └─ trivia-favicon.png
+   ├─ trivia-favicon.png
+   ├─ start-page.png
+   ├─ example-quiz.png
+   └─ finalscore.png
 ```
 
 ## How To Use

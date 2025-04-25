@@ -53,7 +53,6 @@ The question are choosen at random from a pool of different fields and displayed
 
 ## Future Improvement
 - Reset the answer buttons incase a user wants to change their answer
-- Display the correct answers after the final score is displayed
 - Choose the level of difficulty of the random questions
 - Choose category of questions to be generated 
 

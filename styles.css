@@ -28,7 +28,28 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#next-button:hover {
+    box-shadow: 0 0 20px green;
+    border: 3px solid green;
+    cursor: pointer;
+    color: green
+}
+
+#start-button:hover {
+    box-shadow: 0 0 20px green;
+    border: 3px solid green;
+    cursor: pointer;
+    color: green
+}
+
+#reset-btn {
+    box-shadow: 0 0 20px green;
+    border: 3px solid green;
+    cursor: pointer;
+    color: green
+}
+
+.hovered {
     box-shadow: 0 0 20px green;
     border: 3px solid green;
     cursor: pointer;
@@ -39,3 +60,6 @@ button:hover {
     display: none;
 }
 
+#answer-btns {
+    margin-bottom: 20px;
+}

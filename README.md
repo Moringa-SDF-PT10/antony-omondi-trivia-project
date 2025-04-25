@@ -51,6 +51,12 @@ The question are choosen at random from a pool of different fields and displayed
 ![IMG](./assets/example-quiz.png)
 ![IMG](./assets/finalscore.png)
 
+## Future Improvement
+- Reset the answer buttons incase a user wants to change their answer
+- Display the correct answers after the final score is displayed
+- Choose the level of difficulty of the random questions
+- Choose category of questions to be generated 
+
 ## 📃 License
 This project is for educational purpose and has no specific license
 

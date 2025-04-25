@@ -23,3 +23,23 @@ The question are choosen at random from a pool of different fields and displayed
 - `JavaScript`
 - `Open Trivia DB API`
 
+## Project Structure
+```
+📦 antony-omondi-trivia-project
+├─ index.html       
+├─ index.js
+├─ styles.css
+├─ README.md
+└─ assets
+   └─ trivia-favicon.png
+```
+
+## How To Use
+- **Fork and clone the repository**
+- Open the html file in browser
+- Clock the **Start** button to start
+- Click the desired answer to select it.
+- Click **Next** or press **Enter** to go to the next question
+- After answering all the questions, your final score will be displayed.
+- Click **Restart Quiz** to start again
+

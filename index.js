@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const next = document.getElementById("next-button");
     const resultsDisplay = document.getElementById("result-section");
     const finalScore = document.getElementById("final-score");
+    const reviewSection = document.getElementById("review-section")
     const resetQuiz = document.getElementById("reset-btn");
 
     let questionIndex = 0;
     let score = 0;
     let questions = [];
+    let incorrectAnswers = []
 
     start.addEventListener('click', startTrivia);
 
@@ -63,6 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const correct = question.correct_answer;
                 if (answer === correct) {
                     score++;
+                }
+                else {
+                    incorrectAnswers.push({
+                        question: question.question,
+                        correct: correct
+                    })
                 }
                 next.classList.remove("hidden");
                 disableAnswerButtons();
@@ -120,5 +128,26 @@ document.addEventListener("DOMContentLoaded", () => {
         quizSection.classList.add("hidden");
         resultsDisplay.classList.remove("hidden");
         finalScore.textContent = `${score} / ${questions.length}`;
+
+        reviewSection.innerHTML = ""
+
+        if (incorrectAnswers.length > 0){
+            const h3 = document.createElement("h3")
+            h3.textContent = "Correct Answers"
+            reviewSection.appendChild(h3)
+
+            incorrectAnswers.forEach(entry => {
+                const div = document.createElement("div");
+                div.classList.add("review-item");
+                div.innerHTML = `
+                <p><strong>Question:</strong> ${decodeHTML(entry.question)}</p>
+                <p><strong>Answer:</strong> ${decodeHTML(entry.correct)}</p>
+            `;
+                reviewSection.appendChild(div);
+            });
+        }
+        else {
+            reviewSection.textContent = "All questions answered correctly. Congradulations!!"
+        }
     }
 });

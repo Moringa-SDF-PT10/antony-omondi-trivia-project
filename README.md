@@ -51,5 +51,9 @@ The question are choosen at random from a pool of different fields and displayed
 ![IMG](./assets/example-quiz.png)
 ![IMG](./assets/finalscore.png)
 
+## 📃 License
+This project is for educational purpose and has no specific license
 
+## 🙌 Acknowledgments
 
+[Open Trivia Database](https://opentdb.com/) for the awesome free trivia API.
